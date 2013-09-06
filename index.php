@@ -11,7 +11,7 @@ if($_GET['material_name'] && $_GET['material_name'] != "" && isset($_FILES["file
 	}
 }
 ?>
-<form action="index.php" enctype="multipart/form-data">
+<form action="index.php" enctype="multipart/form-data" method="post">
 	<input type="text" value="" name="material_name">
 	<input type="file" name="file" id="file">
 	<input type="submit" value="submit">
