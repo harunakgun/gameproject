@@ -6,7 +6,7 @@ if($_POST['material_name'] && $_POST['material_name'] != "" && isset($_FILES["fi
 		$filename = $_FILES["file"]["name"];
 		$file_ext = explode('.',$_FILES["file"]["name"]);
 		$file_ext = $file_ext[1];
-		move_uploaded_file($_FILES["file"]["tmp_name"],"/media/raw_materials/" . $last_insert.'.'.$file_ext);
+		move_uploaded_file($_FILES["file"]["tmp_name"],"/var/www/gameproject/media/raw_materials/" . $last_insert.'.'.$file_ext);
 		echo($_POST['material_name'].'('.$last_insert.') succesfully inserted.<br>');
 	}
 }
