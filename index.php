@@ -12,7 +12,7 @@ if($_POST['material_name'] && $_POST['material_name'] != "" && isset($_FILES["fi
 	}
 }
 ?>
-<form action="index.php" enctype="multipart/form-data" method="post">
+<form action="raw_insert.php" enctype="multipart/form-data" method="post">
 	<input type="text" value="" name="material_name">
 	<input type="file" name="file" id="file">
 	<input type="submit" value="submit">
