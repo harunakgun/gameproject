@@ -20,9 +20,9 @@ if($_POST['material_name'] && $_POST['material_name'] != "" && isset($_FILES["fi
 $results = mysql_db_query($db,'SELECT * FROM raw_materials',$cn);
 while($row = mysql_fetch_assoc($results)){
 	$imgPath = "";
-	if(file_exists('/media/raw_materials/'.$row['id'].'.png')) {
+	if(file_exists('/var/www/gameproject/media/raw_materials/'.$row['id'].'.png')) {
 		$imgPath = '/media/raw_materials/'.$row['id'].'.png';
-	} elseif(file_exists('/media/raw_materials/'.$row['id'].'.jpg')) {
+	} elseif(file_exists('/var/www/gameproject/media/raw_materials/'.$row['id'].'.jpg')) {
 		$imgPath = '/media/raw_materials/'.$row['id'].'.jpg';
 	}
 	echo("<img src='".$imgPath."' />".$row['name']."<br>");
