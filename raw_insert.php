@@ -29,6 +29,6 @@ while($row = mysql_fetch_assoc($results)){
 	} elseif(file_exists($dc_root.'media/raw_materials/'.$row['id'].'.jpg')) {
 		$imgPath = '/media/raw_materials/'.$row['id'].'.jpg';
 	}
-	echo("<div style='width:200px;height:50px;float:left;border:1px solid #ccc;'><img src='".$imgPath."' />".$row['name']."</div>");
+	echo("<div style='width:200px;height:64px;float:left;border:1px solid #ccc;'><div style='height:64px;width:64px;float:left;'><img src='".$imgPath."' /></div><div style='float:left;'>".$row['name']."</div></div>");
 }
 ?>
