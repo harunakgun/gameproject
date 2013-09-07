@@ -1,8 +1,9 @@
 <?php
 include_once('inc/db_con.php');
 if($_POST['material_name'] && $_POST['material_name'] != "" && isset($_FILES["file"]["name"])){
-	$last_insert = mysql_db_query($db,"INSERT INTO raw_materials VALUES('','".$_POST['material_name']."','0','0','0')",$cn);
-	if($last_insert){
+	$success = mysql_db_query($db,"INSERT INTO raw_materials VALUES('','".$_POST['material_name']."','0','0','0')",$cn);
+	if($success){
+		$last_insert = mysql_insert_id();
 		$filename = $_FILES["file"]["name"];
 		$file_ext = explode('.',$_FILES["file"]["name"]);
 		$file_ext = $file_ext[1];
