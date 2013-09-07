@@ -1,4 +1,5 @@
 ﻿<?php
+header('Content-Type: text/html; charset=utf-8');
 $dc_root = $_SERVER['DOCUMENT_ROOT'];
 
 include_once('inc/db_con.php');
