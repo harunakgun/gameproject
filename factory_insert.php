@@ -19,7 +19,7 @@ if($_POST['factory_name'] && $_POST['factory_name'] != "" && isset($_FILES["file
 	}
 }
 ?>
-<form action="raw_insert.php" enctype="multipart/form-data" method="post">
+<form action="factory_insert.php" enctype="multipart/form-data" method="post">
 	<input type="text" value="" name="factory_name">
 	<input type="file" name="file" id="file">
 	<input type="submit" value="submit">
