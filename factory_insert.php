@@ -28,8 +28,8 @@ if($_POST['factory_name'] && $_POST['factory_name'] != "" && isset($_FILES["file
 $results = mysql_db_query($db,'SELECT * FROM factories',$cn);
 while($row = mysql_fetch_assoc($results)){
 	$imgPath = "";
-	if(file_exists($dc_root.'media/factories/thumbs/'.$row['id'].'.png')) {
-		$imgPath = '/media/factories/thumbs/'.$row['id'].'.png';
+	if(file_exists($dc_root.'media/factories/thumb/'.$row['id'].'.png')) {
+		$imgPath = '/media/factories/thumb/'.$row['id'].'.png';
 	}
 	echo("<div style='width:200px;height:64px;float:left;border:1px solid #ccc;'><div style='height:64px;width:64px;float:left;'><img src='".$imgPath."' /></div><div style='float:left;'>".$row['name']."</div></div>");
 }
