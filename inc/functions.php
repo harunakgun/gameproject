@@ -16,10 +16,11 @@ function make_thumb($image_name,$new_image_name,$thumb_width =40,$quality = 90)
      $imgratio=$breite/$hoehe;
      $newwidth = $ThumbWidth;
      $newheight = $ThumbWidth/$imgratio;
-
+     imagealphablending( $image2, false );
+     imagesavealpha( $image2, true );
      $image2 = imagecreatetruecolor($newwidth, $newheight);
      imagecopyresampled ($image2, $image, 0, 0, 0, 0, $newwidth, $newheight, $breite, $hoehe);
-     @imagejpeg($image2,$new_image_name , $quality);
+     @imagepng($image2,$new_image_name , $quality);
      imagedestroy($image);
      imagedestroy($image2);
      @chmod($new_image_name, 0777);
