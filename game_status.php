@@ -8,7 +8,7 @@ $serverStarted = $row['started_at'];
 $currentTime = time();
 
 $passedSecs = $currentTime - $serverStarted;
-$interval = 3;
+$interval = 1;
 $minutes = $passedSecs / $interval;
 
 //NOW CONVERT THE MINUTES TO SECONDS
