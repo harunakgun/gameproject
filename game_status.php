@@ -13,6 +13,7 @@ $minutes = $passedSecs / $interval;
 
 //NOW CONVERT THE MINUTES TO SECONDS
 $totalSecs = ($minutes/60);
+echo($totalSecs."<br>");
 
 $monthToShow = date("F",$totalSecs);
 $dayToShow = date("D",$totalSecs);
