@@ -16,7 +16,7 @@ $totalSecs = ($minutes*60);
 echo($totalSecs."<br>");
 
 $monthToShow = date("F",$totalSecs);
-$dayToShow = date("D",$totalSecs);
+$dayToShow = date("d",$totalSecs);
 $yearToShow = (date("Y",$totalSecs)) - 70;
 $hoursToShow = date("H:i",$totalSecs);
 $date = $monthToShow." ".$dayToShow.", ".$yearToShow.", ".$hoursToShow;
